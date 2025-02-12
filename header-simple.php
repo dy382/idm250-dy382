@@ -6,6 +6,4 @@
     <title>Document</title>
 </head>
 <body>
-    Hello this is the <strong>front-page.php<strong> file
-</body>
-</html>
+

@@ -1,9 +1,5 @@
-<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+<?php get_header('simple'); ?>
 
-<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
-<main class="wp-block-group">
-	<!-- wp:pattern {"slug":"twentytwentythree/hidden-404"} /-->
-</main>
-<!-- /wp:group -->
+    Hello this is the 404 Page
 
-<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
+<?php get_footer(); ?>
