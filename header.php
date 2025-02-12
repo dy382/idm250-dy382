@@ -10,14 +10,19 @@
     bloginfo('name'); // IDM250
     ?>
   </title>
-
+  <?php wp_head(); ?>
 </head>
-<body>
 
-<!-- <?php get_template_part('components/main-header'); ?> -->
+<body 
 
-    Hello this is the <strong>header.php</strong> file
-
+  <?php body_class(); ?>>
+  <?php wp_body_open(); ?>
+  <?php get_template_part('components/main-header'); ?>
+  <?php
+    // wp_nav_menu([
+    //     'theme_location' => 'primary-menu',
+    // ]);
+    ?>
 <header>
 
 <nav>
