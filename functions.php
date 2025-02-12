@@ -18,16 +18,16 @@ function theme_styles_and_scripts()
 
     wp_enqueue_style(
         'idm-main', // Handle for the stylesheet
-        get_template_directory_uri() . '/dist/styles/main.css', // Path to the stylesheet
+        get_template_directory_uri() . '/assets/styles/main.css', // Path to the stylesheet
         [], // No dependencies
-        filemtime(get_template_directory() . '/dist/styles/main.css') // Cache-busting by file modification time
+        filemtime(get_template_directory() . '/assets/styles/main.css') // Cache-busting by file modification time
     );
 
     wp_enqueue_script(
         'idm-main-script', // Handle for the script
-        get_template_directory_uri() . '/dist/scripts/main.js', // Path to the script
+        get_template_directory_uri() . '/assets/scripts/main.js', // Path to the script
         [], // No dependencies
-        filemtime(get_template_directory() . '/dist/scripts/main.js'), // Cache-busting by file modification time
+        filemtime(get_template_directory() . '/assets/scripts/main.js'), // Cache-busting by file modification time
         true // Load in the footer
     );
 }
@@ -38,7 +38,7 @@ function login_page_custom_logo()
 {
     echo '<style>
         body.login { background-color: #f3f3f3; }
-        .login h1 a { background-image: url(' . get_stylesheet_directory_uri() . '/dist/images/logo.webp) !important; }
+        .login h1 a { background-image: url(' . get_stylesheet_directory_uri() . '/assets/images/logo.webp) !important; }
     </style>';
 }
 add_action('login_enqueue_scripts', 'login_page_custom_logo');

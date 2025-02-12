@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    Hello this is the <strong>front-page.php<strong> file
-</body>
-</html>
+<?php get_header(); ?>
+
+<?php include 'functions.php'; ?>
+    Hello this is the index.php file
+
+<?php get_footer(); ?>
