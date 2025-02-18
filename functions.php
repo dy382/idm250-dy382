@@ -1,12 +1,4 @@
 <?php
-/**
- * Enqueues all scripts and styles for the theme.
- * This function is called when WordPress loads the theme.
- *
- * @return void
- * @link https://developer.wordpress.org/reference/functions/wp_enqueue_script/
- * @link https://developer.wordpress.org/reference/functions/wp_enqueue_style/
- */
 function theme_styles_and_scripts()
 {
     wp_enqueue_style(
@@ -51,6 +43,7 @@ function theme_setup()
     // Register navigation menus
     register_nav_menus([
         'primary-menu' => 'Primary Menu',
+        'footer-menu' => 'Footer Menu',
     ]);
 }
 

@@ -1,5 +1,5 @@
+
 <?php get_header(); ?>
-<main>
-    <p>Hello this is the index.php file</p>
-</main>
+
+    Hello this is the index.php file
 <?php get_footer(); ?>
