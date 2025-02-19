@@ -18,16 +18,20 @@
 </head>
 
 <body>
-
+  <?php body_class(); ?>>
+  <?php wp_body_open(); ?>
+  <header>
 <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
         <label class="logo">Doyeon Yoo</label>
-        <ul>
-            <li><a class="active" href="#">Portfolio</a></li>
-            <li><a href="#">Travel</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+<?php
+    wp_nav_menu( [ 
+        'theme_location' => 'primary-menu',  
+    ]);
+?>
 </nav>
+
+</header>

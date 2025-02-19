@@ -1,6 +1,10 @@
 <?php get_header(); ?>
 
-<?php include 'functions.php'; ?>
-    Hello this is the index.php file
+<h1>
+
+<?php
+    echo get_the_title();
+?>
+</h1>
 
 <?php get_footer(); ?>
