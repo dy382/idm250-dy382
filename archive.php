@@ -1,29 +1,69 @@
-<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+<?php
 
-<!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group" style="margin-top:var(--wp--preset--spacing--70);margin-bottom:var(--wp--preset--spacing--70)">
-	<!-- wp:query-title {"type":"archive","align":"wide","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}}}} /-->
 
-	<!-- wp:query {"query":{"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"displayLayout":{"type":"flex","columns":3},"align":"wide","layout":{"type":"default"}} -->
-	<div class="wp-block-query alignwide">
-		<!-- wp:post-template {"align":"wide"} -->
-			<!-- wp:post-featured-image {"isLink":true,"width":"100%","height":"clamp(15vw, 30vh, 400px)","align":"wide"} /-->
-			<!-- wp:post-title {"isLink":true} /-->
-			<!-- wp:post-excerpt /-->
-			<!-- wp:post-date {"isLink":true} /-->
 
-			<!-- wp:spacer {"height":"var(--wp--preset--spacing--50)"} -->
-			<div style="height:var(--wp--preset--spacing--50)" aria-hidden="true" class="wp-block-spacer"></div>
-			<!-- /wp:spacer -->
-		<!-- /wp:post-template -->
+/**
+ * Archive Template
+ *
+ * This file is used by WordPress to display archive pages.
+ * Archive pages show a list of posts grouped by specific criteria, such as:
+ *
+ * - Categories (e.g., all posts in "News" category)
+ * - Tags (e.g., all posts tagged "Travel")
+ * - Author archives (all posts by a specific author)
+ * - Date archives (e.g., all posts from January 2024)
+ * - Custom post type archives (if no specific archive-{post_type}.php exists)
+ *
+ * 🔥 **Template Hierarchy**:
+ * WordPress looks for templates in this order for archive pages:
+ *
+ *   1. category-{slug}.php     (e.g., category-news.php)
+ *   2. category-{id}.php       (e.g., category-4.php)
+ *   3. category.php            (if it's a category archive)
+ *   4. tag.php                 (if it's a tag archive)
+ *   5. taxonomy-{taxonomy}.php (for custom taxonomies)
+ *   6. archive-{post_type}.php (for custom post types)
+ *   7. archive.php             ✅ (this file)
+ *   8. index.php               (fallback)
+ *
+ * 💡 **Key Points for Students:**
+ * - This file provides a fallback for all archives unless more specific templates exist.
+ * - Use this file to control how archive listings appear (e.g., category or date listings).
+ * - You can customize it further or create more specific archive templates if needed.
+ *
+ * 📚 **Functions used in this file:**
+ * - `get_header()`: Includes the header.php file.
+ * - `have_posts()`: Checks if there are posts to display.
+ * - `the_post()`: Iterates the post loop.
+ * - `the_permalink()`: Retrieves the post URL.
+ * - `the_title()`: Displays the post title.
+ * - `the_posts_pagination()`: Adds pagination links for multiple pages of posts.
+ * - `get_footer()`: Includes the footer.php file.
+ *
+ * 🌐 For more information: https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package YourThemeName
+ */
+?>
 
-		<!-- wp:query-pagination {"paginationArrow":"arrow","layout":{"type":"flex","justifyContent":"space-between"}} -->
-			<!-- wp:query-pagination-previous /-->
-			<!-- wp:query-pagination-next /-->
-		<!-- /wp:query-pagination -->
-	</div>
-	<!-- /wp:query -->
-</main>
-<!-- /wp:group -->
+<?php get_header(); ?>
 
-<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
+    <?php if (have_posts()) :  ?>
+
+  <h1><?php the_archive_title(); ?>
+
+<ul>
+  <?php while (have_posts()) : the_post(); ?>
+  <li>
+    <a
+      href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+  </li>
+  <?php endwhile; ?>
+</ul>
+
+<?php the_posts_pagination(); ?>
+		<?php else : ?>
+			<p>No Posts Found.</p>
+		<?php endif; ?>
+
+<?php get_footer(); ?>

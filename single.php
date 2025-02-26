@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+<div class="singles-content">
 <main class="post-container">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article class="post">
@@ -30,5 +31,5 @@
 
 <img src=".img" alt="Girl in a jacket">
 
-
+</div>
 <?php get_footer(); ?>

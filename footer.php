@@ -1,6 +1,5 @@
 
 <footer> 
-    <p>&copy; 2025 IDM250</p>
 
     <nav>
         <input type="checkbox" id="check">
@@ -8,6 +7,7 @@
             <i class="fas fa-bars"></i>
         </label>
         <label class="logo">Doyeon Yoo</label>
+        <p>&copy; 2025 IDM250</p>
         <ul>
             <li><a class="active" href="#">Instagram</a></li>
             <li><a href="#">email</a></li>
