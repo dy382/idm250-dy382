@@ -3,6 +3,15 @@
 <div class="singles-content">
 <main class="post-container">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<section class="single-row">
+<div class="wrapper">
+    <aside>
+        <ul>
+        <?php dynamic_sidebar('main-sidebar');?>
+    </ul>
+    </aside>
+</section>
+
         <article class="post">
             <h1 class="post-title">      
                 <?php echo get_the_title(); ?>
@@ -14,7 +23,10 @@
                     <?php the_post_thumbnail(); ?>
                 </div>
             <?php endif; ?>
-            
+
+    <?php get_template_part('components/content'); ?>
+    <?php get_template_part('components/author-box'); ?>
+    </div>
             <div class="post-content">
                 <?php the_content(); ?>
             </div>
@@ -26,10 +38,6 @@
     <?php endwhile; endif; ?>
 </main>
 
-<h1>My Trip TO Korea</h1>
-<p>Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.</p>
-
-<img src=".img" alt="Girl in a jacket">
 
 </div>
 <?php get_footer(); ?>

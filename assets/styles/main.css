@@ -150,7 +150,12 @@ h6 {
   font-weight: bold;
 }
 
-
+.main-content {
+    max-width: 1200px;
+    display:flex;
+    flex-direction: column;
+    margin: 3rem auto;
+}
 
   .wrapper {
     max-width: 1200px;
@@ -158,6 +163,7 @@ h6 {
     flex-direction: column;
     margin: 3rem auto;
   }
+
   .singles-content {
     max-width: 1200px;
     display:flex;
@@ -168,6 +174,13 @@ h6 {
   .post-thumbnail img {
     max-width: 1000px;
     height: auto;
+  }
+
+  .post-content {
+    max-width: 1200px;
+    display:flex;
+    flex-direction: column;
+    margin: 3rem auto;
   }
 
   .page-content {
@@ -182,4 +195,12 @@ h6 {
     display:flex;
     flex-direction: column;
     margin: 3rem auto;
+  }
+
+  .single-row {
+    display: flex;
+    justify-content:space-between;
+  }
+  .single-row aside {
+    width: 30%;
   }

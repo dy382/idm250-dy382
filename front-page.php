@@ -13,7 +13,13 @@
 
   <div class="page-content">
     <?php echo get_the_content(); ?>
+
+    while ()
+    get_template_part(slug: 'components/project-card');
+
   </div>
+
+
 </div>
 
 <?php get_footer(); ?>

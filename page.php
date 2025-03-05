@@ -26,10 +26,6 @@
     <?php endwhile; endif; ?>
 </main>
 
-<h1>My Trip TO Korea</h1>
-<p>Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.</p>
-
-
 
 </div>
 <?php get_footer(); ?>
