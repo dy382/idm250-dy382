@@ -156,8 +156,8 @@ add_action('widgets_init', 'add_widgets');
 function register_custom_sidebar()
 {
     register_sidebar([
-        'name' => 'Primary Sidebar',
-        'id' => 'primary-sidebar',
+        'name' => 'Main Sidebar',
+        'id' => 'main-sidebar',
         'description' => 'Widgets in this area will be shown in the Primary Sidebar.',
         'before_widget' => '<div class="widget">',
         'after_widget' => '</div>',
@@ -175,7 +175,8 @@ function register_custom_sidebar()
         'after_title' => '</h4>',
     ]);
 }
-// add_action('widgets_init', 'register_custom_sidebar');
+
+add_action('widgets_init', 'register_custom_sidebar');
 
 
 /**
