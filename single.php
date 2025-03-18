@@ -3,8 +3,9 @@
 <div class="singles-content">
 <main class="post-container">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-<section class="single-row">
+
 <div class="wrapper">
+<section class="single-row">
     <aside>
         <ul>
         <?php dynamic_sidebar('main-sidebar');?>
