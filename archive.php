@@ -47,23 +47,53 @@
 ?>
 
 <?php get_header(); ?>
+<div class="wrapper">
+  <div class="archive-header">
+    <h1><?php the_archive_title(); ?></h1>
+    <?php the_archive_description(); ?>
+  </div>
 
-    <?php if (have_posts()) :  ?>
+  <?php if (have_posts()) : ?>
 
-  <h1><?php the_archive_title(); ?>
+  <ul class="grid grid-3">
+    <?php
+  while (have_posts()) : the_post(); ?>
+    <div class="grid-item">
+      <?php get_template_part('components/project-card'); ?>
+    </div>
 
-<ul>
-  <?php while (have_posts()) : the_post(); ?>
-  <li>
-    <a
-      href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-  </li>
-  <?php endwhile; ?>
-</ul>
+    <?php endwhile; ?>
+  </ul>
 
-<?php the_posts_pagination(); ?>
-		<?php else : ?>
-			<p>No Posts Found.</p>
-		<?php endif; ?>
+  <?php the_posts_pagination(); ?>
 
+  <?php else : ?>
+  <p>No posts found.</p>
+  <?php endif; ?>
+</div>
 <?php get_footer(); ?>
+
+<style>
+
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+.grid-3 {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.project-group {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+ }
+
+</style>

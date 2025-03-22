@@ -31,9 +31,16 @@ body {
     padding: 10px 20px;
   }
   
-  ul {
+  nav ul {
     display: flex;
     list-style: none;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+  }
+
+  ul {
     padding: 0;
     margin: 0;
   }
@@ -43,7 +50,6 @@ body {
   }
   
   ul li a {
-    text-decoration: none;
     transition: color 0.3s;
   }
   
@@ -151,23 +157,32 @@ h6 {
 }
 
 .main-content {
-    max-width: 1200px;
+    max-width: 1000px;
     display:flex;
     flex-direction: column;
     margin: 3rem auto;
 }
 
   .wrapper {
-    max-width: 1200px;
+    max-width: 1000px;
     display:flex;
     flex-direction: column;
     margin: 3rem auto;
   }
 
-  .singles-content {
-    max-width: 1200px;
+  .content {
+    max-width: 1000px;
     display:flex;
     flex-direction: column;
+    padding: 20px;
+    margin: 3rem auto;
+  }
+
+  .singles-content {
+    max-width: 1000px;
+    display:flex;
+    flex-direction: column;
+    padding: 20px;
     margin: 3rem auto;
   }
 
@@ -177,16 +192,18 @@ h6 {
   }
 
   .post-content {
-    max-width: 1200px;
+    max-width: 1000px;
     display:flex;
     flex-direction: column;
+    padding: 20px;
     margin: 3rem auto;
   }
 
   .page-content {
-    max-width: 1200px;
+    max-width: 1000px;
     display:flex;
     flex-direction: column;
+    padding: 20px;
     margin: 3rem auto;
   }
 
@@ -211,4 +228,9 @@ h6 {
   }
   .single-row aside {
     width: 30%;
+  }
+
+  .featured-image img {
+    max-width: 1000px;
+    height: auto;
   }

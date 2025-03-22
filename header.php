@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <meta name="og:image" content="<?php echo get_template_directory_uri(); ?>/dist/images/og-image.jpg">
-    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/sws-logo.svg" type="image/svg+xml">
+    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/Favicon.svg" type="image/svg+xml">
 
 
     <title>
@@ -35,3 +35,10 @@
 </nav>
 
 </header>
+
+<style>
+nav {
+  margin: 20px;
+}
+
+  </style>
